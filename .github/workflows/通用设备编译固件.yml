@@ -19,6 +19,14 @@ on:
           - lede-master
           - immortalwrt-master
           - Lienol-master
+      force-build:
+        description: "Build new firmware anyway"
+        required: false
+        default: "false"
+      ssh:
+        description: "SSH connection to Actions"
+        required: false
+        default: "false"
       
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
